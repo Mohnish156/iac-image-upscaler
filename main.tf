@@ -1,19 +1,16 @@
-provider "aws" {
-  region = "us-west-2"  # replace with your AWS region
-}
-
 module "ecs" {
   source = "./ecs"
-}
-
-module "ecr" {
-  source = "./ecr"
+  ecs_task_execution_role_arn = module.iam.ecs_task_execution_role_arn
 }
 
 module "iam" {
   source = "./iam"
 }
 
-module "vpc" {
-  source = "./vpc"
+module "network" {
+  source = "./network"
+}
+
+module "ecr" {
+  source = "./ecr"
 }
