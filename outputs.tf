@@ -1,4 +1,4 @@
-# Global outputs can be placed here, or you can output module-specific values
-output "ecs_cluster_name" {
-  value = module.ecs.ecs_cluster_name
+output "ecs_service_url" {
+  description = "URL for the deployed ECS service"
+  value       = "http://${aws_instance.upscaler_instance.public_ip}"
 }
