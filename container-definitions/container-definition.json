@@ -2,7 +2,7 @@
     {
         "name": "image-upscaler-container",
         "image": "030962173369.dkr.ecr.us-west-2.amazonaws.com/image-upscaler-repository:latest",
-        "memory": 512,
+        "memory": 8192,
         "cpu": 256,
         "essential": true,
         "resourceRequirements": [
